@@ -1,0 +1,83 @@
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15PX;
+    border-bottom: 1px solid #F3EDED;
+    padding-bottom: 27px;
+
+    .logo{
+        width: 92px;
+        height: 44px;
+    }
+
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+
+        .phone-number {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                position: relative;
+                width: 15px;
+                height: 15px;
+                overflow: hidden;
+                margin-right: 20px;
+            }
+        }
+
+        .email {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px 0 40px; 
+            img {
+                position: relative;
+                width: 23px;
+                height: 14px;
+                overflow: hidden;
+                margin-right: 20px;
+            }
+        }
+
+        button {
+            position: relative;
+            height: 41px;
+            width: 129px;
+            color: rgb(255, 255, 255);
+            border-radius: 6px;
+            border: none;
+            background-color: #86be3f;
+        }
+    }
+}
+.menu{
+    text-align: center;
+    position: absolute;
+
+
+    ul{
+        display: flex;
+        margin-left: 150px;
+
+        li{
+            list-style: none;
+            margin-left: 125px;
+
+            a{
+                text-decoration: none;  
+                color: #8a8888;  
+                
+                &:hover{
+                    color: #86be3f;
+                }
+            }
+        }
+    }
+}
