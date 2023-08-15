@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,600&display=swap");
 .header-main {
   display: flex;
@@ -73,11 +74,11 @@
 }
 .menu ul {
   display: flex;
-  margin-left: 74px;
+  margin-left: 146px;
+  gap: 70px;
 }
 .menu ul li {
   list-style: none;
-  margin-left: 70px;
   margin-bottom: 20px;
 }
 .menu ul li a {
@@ -407,17 +408,24 @@
 
 .icon-container {
   display: flex;
-  margin-top: 20px;
-  background-color: #F9F9F9;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  background-color: #F9F9F9;
   gap: 30px;
   padding: 30px 0px 30px 0px;
 }
 .icon-container .icon-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
   width: 255px;
-  height: 147px;
   background-color: #fff;
+  border: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  height: 147.9px;
 }
 .icon-container .icon-card img {
   text-align: center;
@@ -429,6 +437,7 @@
   line-height: 24px;
   text-align: center;
   color: #363636;
+  margin: 10px 0px 10px 0px;
 }
 .icon-container .icon-card p {
   font-family: "Poppins", sans-serif;
@@ -438,4 +447,197 @@
   text-align: center;
   color: #666;
   text-transform: uppercase;
+}
+
+.why-chose-main {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+}
+.why-chose-main h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+.why-chose-main .why-chose-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+.why-chose-main .why-chose-container .why-chose-card {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+  width: 540px;
+  height: 970px;
+  text-align: left;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content {
+  margin: 26px 0px 0px 26px;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 21.113px;
+  color: #86BE3F;
+  font-family: "Poppins", sans-serif;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content h5 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 13.44px;
+  font-family: Inter;
+  color: #363636;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content h6 {
+  margin: 0px 0px -8px 0px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27.92px;
+  font-family: "Poppins", sans-serif;
+  color: #363636;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content ul {
+  padding: 0px 0px 0px 15px;
+  list-style-type: none;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content ul li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24x;
+  font-family: "Poppins", sans-serif;
+  color: #666666;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #86BE3F;
+  font-size: 24px;
+  margin: -6px 0px 0px 20px;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content .icon-box {
+  display: flex;
+  gap: 50px;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content .icon-box img {
+  width: 62px;
+  height: 62px;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content .icon-box p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17px;
+  font-family: "Poppins", sans-serif;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content .main-features {
+  width: 413px;
+  height: 166.55px;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content .main-features .features {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 20.45px;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content .main-features .features p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 10.8px;
+  font-family: "Poppins", sans-serif;
+  color: #666666;
+}
+.why-chose-main .why-chose-container .why-chose-card .why-chose-content .main-features .features .overflow-text {
+  line-height: 19.92px;
+  width: 392px;
+  height: 28px;
+  margin-top: -2px;
+}
+
+.How-it-Work-main {
+  text-align: center;
+  padding: 50px 0px 50px 0px;
+  background-image: url(icon\ background.png);
+}
+.How-it-Work-main h2 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+.How-it-Work-main .frame-1 {
+  position: absolute;
+  margin: 5px 828px 0px 0px;
+}
+.How-it-Work-main .frame-2 {
+  position: absolute;
+  margin: 5px 253px 0px 0px;
+}
+.How-it-Work-main .frame-3 {
+  position: absolute;
+  margin: 5px 0px 0px 318px;
+}
+.How-it-Work-main .frame-4 {
+  position: absolute;
+  margin: 5px 0px 0px 858px;
+}
+.How-it-Work-main button {
+  margin-top: 48.67px;
+  position: relative;
+  border-radius: 6px;
+  border: none;
+  background-color: #86be3f;
+  color: #FFFFFF;
+  height: 45px;
+  width: 171px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 13.92px;
+  font-family: "Poppins", sans-serif;
+}
+.How-it-Work-main .work-flow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 60px;
+  padding: 30px 0px 30px 0px;
+}
+.How-it-Work-main .work-flow-container .work-flow-card {
+  text-align: center;
+  padding: 20px 30px 0px 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 227px;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  height: 230px;
+}
+.How-it-Work-main .work-flow-container .work-flow-card img {
+  text-align: center;
+}
+.How-it-Work-main .work-flow-container .work-flow-card h5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 13.44px;
+  text-align: center;
+  color: #363636;
+  font-family: Inter;
+  margin-top: 12px;
+}
+.How-it-Work-main .work-flow-container .work-flow-card p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.71px;
+  text-align: center;
+  color: #666666;
+  font-family: Inter;
 }/*# sourceMappingURL=index.css.map */
