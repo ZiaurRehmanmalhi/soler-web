@@ -1,4 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,600&display=swap');
+@import "./variables";
+@mixin truncate($lines, $lh: 1.2, $spacer: 0) {
+    line-height: $lh;
+    max-height: $lh * $lines + $spacer + em;
+    text-overflow: ellipsis;
+    text-overflow: -o-ellipsis-lastline;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 .header-main {
     display: flex;
@@ -35,11 +55,17 @@
             }
 
             p {
-                font-family: popins;
                 font-size: 16px;
                 line-height: 24px;
-                font-weight: 400;
-                font-family: 'Poppins', sans-serif;
+                margin: 0;
+
+                a{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #8A8888;
+
+                }
 
             }
         }
@@ -59,11 +85,14 @@
             }
 
             p {
-                font-family: popins;
                 font-size: 16px;
-                line-height: 24px;
-                font-weight: 400;
-                font-family: 'Poppins', sans-serif;
+                margin: 0;
+
+                a{
+                    line-height: 24px;
+                    font-weight: 400;    
+                    color: #8A8888;
+                }
 
             }
         }
@@ -83,11 +112,13 @@
 
 .menu {
     text-align: center;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
 
     ul {
         display: flex;
-        margin-left: 146px;
         gap: 70px;
 
         li {
@@ -100,7 +131,6 @@
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 17px;
-                font-family: 'Poppins', sans-serif;
 
                 &:hover {
                     color: #86be3f;
@@ -114,9 +144,9 @@
     text-align: center;
     justify-content: center;
     background-image: url(background.png);
-    margin-top: 50px;
     height: 698px;
     width: 100%;
+    gap: 15px;
     display: flex;
     flex-direction: column;
     object-fit: cover;
@@ -128,25 +158,23 @@
     h1 {
         font-size: 64px;
         font-weight: 700;
-        line-height: 36px;
+        line-height: 56.01px;
         color: #fff;
-        font-family: 'Poppins', sans-serif;
     }
 
     p {
         font-weight: 500;
         font-size: 24px;
-        line-height: 33px;
+        line-height: 33.85px;
         color: #fff;
         margin: 0 auto;
         max-width: 65%;
-        line-height: 1.3;
         text-align: center;
-        font-family: 'Poppins', sans-serif;
     }
 }
 
 .about-us {
+    position: relative;
     text-align: center;
     margin-top: 90px;
 
@@ -155,27 +183,28 @@
         font-size: 36px;
         font-weight: 600;
         color: #363636;
-        font-family: 'Poppins', sans-serif;
     }
 
     .divide-image {
-        padding-bottom: 20px;
+        margin-top: 25px;
+        padding-bottom: 10px;
     }
 
     .dots-image {
         position: absolute;
-        left: 80px;
         margin-top: -40px;
+        top: 50px;
+        left: 80px;
     }
 
     p {
         font-size: 17px;
+        display: flex;
         line-height: 26px;
         font-weight: 400;
         color: #363636;
         max-width: 75%;
         margin: auto;
-        font-family: 'Poppins', sans-serif;
         padding-bottom: 20px;
 
     }
@@ -183,7 +212,6 @@
     .image-boxes-container {
         display: flex;
         justify-content: center;
-        align-items: center;
         gap: 30px;
 
     }
@@ -204,14 +232,14 @@
             background-color: #f8f8f8;
             padding-top: 80px;
             width: 370px;
-            height: 220px;
+            min-height: 271px;
 
             h3 {
                 font-size: 20px;
                 line-height: 22px;
+                margin: 10px 0px;
                 font-weight: 500;
                 color: #363636;
-                font-family: 'Poppins', sans-serif;
             }
 
             p {
@@ -220,7 +248,6 @@
                 font-weight: 400px;
                 max-width: 89%;
                 color: #666666;
-                font-family: 'Poppins', sans-serif;
             }
         }
 
@@ -234,7 +261,7 @@
 
     .testimonial {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         max-width: 63%;
         margin: auto;
@@ -243,7 +270,6 @@
         img {
             width: 30px;
             height: 25px;
-            margin-top: -62px;
         }
 
         p {
@@ -252,30 +278,29 @@
             line-height: 30px;
             font-weight: 500;
             max-width: 87%;
-            font-family: 'Poppins', sans-serif;
             color: #363636;
         }
     }
 
     .testimonial-name {
         display: flex;
-        align-items: center;
+        align-items: self-end;
         justify-content: space-between;
         max-width: 13%;
         margin: auto;
-        margin-top: -20px;
+        padding-top: 15px;
 
         p {
             color: #86BE3F;
             font-size: 18px;
             line-height: 16px;
             font-weight: 500;
-            font-family: 'Poppins', sans-serif;
         }
     }
 }
 
 .SIRE-main {
+    position: relative;
     display: flex;
     align-items: center;
     text-align: center;
@@ -288,20 +313,22 @@
     .dot-top {
         position: absolute;
         z-index: -1;
-        margin: -16px 0px 0px -23px;
-
+        top: -18px;
+        left: 146px;
     }
 
     .curcle {
         position: absolute;
-        margin: 45px 0px -40px -333px;
         z-index: -1;
+        top: 50px;
+        left: 222px;
     }
 
     .dot-bottom {
         position: absolute;
-        margin: 6px 0px 0px -60px;
         z-index: -1;
+        bottom: -12px;
+        left: 635px;
     }
 
     .image-7 {
@@ -333,15 +360,15 @@
             font-weight: 500;
             line-height: 25px;
             color: #86BE3F;
-            font-family: 'Poppins', sans-serif;
+            padding-bottom: 20px;
         }
 
         h3 {
             font-size: 34px;
             font-weight: 600;
-            line-height: 5px;
+            line-height: 39px;
             color: #363636;
-            font-family: 'Poppins', sans-serif;
+            padding-bottom: 15px;
         }
 
         p {
@@ -349,7 +376,8 @@
             font-weight: 400;
             line-height: 27px;
             padding-right: 24%;
-            font-family: 'Poppins', sans-serif;
+            padding-top: 20px;
+            padding-bottom: 30px;
             color: #666666;
         }
     }
@@ -370,7 +398,7 @@
         font-weight: 600;
         line-height: 30px;
         padding-top: 80px;
-        font-family: 'Poppins', sans-serif;
+        margin-bottom: 15px;
     }
 
     .main-features {
@@ -385,23 +413,19 @@
             font-size: 20px;
             line-height: 16.8px;
             font-weight: 600;
-            font-family: 'Poppins', sans-serif;
             color: #1E1E1E;
             text-align: left;
-            margin: 0;
-
-
         }
 
         p {
             font-size: 18px;
             line-height: 23.13px;
             font-weight: 400;
-            font-family: 'Poppins', sans-serif;
             text-align: left;
             width: 462px;
             height: 106.386px;
             margin-bottom: 40px;
+            margin-top: 10px;
 
         }
 
@@ -409,6 +433,8 @@
             display: flex;
             gap: 10px;
             align-items: flex-start;
+            border: none;
+            flex-direction: row;
         }
 
         .card:nth-of-type(1) {
@@ -427,14 +453,12 @@
         font-size: 36px;
         font-weight: 600;
         line-height: 30px;
-        font-family: 'Poppins', sans-serif;
     }
 
     .perche-container {
         display: flex;
         margin-top: 50px;
         justify-content: center;
-        align-items: center;
         gap: 40px;
 
 
@@ -444,12 +468,10 @@
             background-color: #fff;
             box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
             width: 349px;
-            height: 320.51px;
-            padding-top: 40px;
+            padding: 43px 0px 15px 0px;
 
 
             h5 {
-                font-family: 'Poppins', sans-serif;
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 50px;
@@ -461,15 +483,14 @@
             }
 
             p {
-                font-family: 'Poppins', sans-serif;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 26px;
                 text-align: center;
-                margin: 10px 0px 0px 0px;
                 width: 323px;
                 margin: auto;
                 color: #363636;
+                @include truncate(6);
             }
         }
     }
@@ -501,7 +522,6 @@
         }
 
         h5 {
-            font-family: 'Poppins', sans-serif;
             font-weight: 600;
             font-size: 24px;
             line-height: 24px;
@@ -511,7 +531,6 @@
         }
 
         p {
-            font-family: 'Poppins', sans-serif;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
@@ -532,7 +551,6 @@
         font-size: 36px;
         font-weight: 600;
         line-height: 30px;
-        font-family: 'Poppins', sans-serif;
         margin-bottom: 10px;
     }
 
@@ -547,7 +565,6 @@
             background-color: #fff;
             box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
             width: 540px;
-            height: 970px;
             text-align: left;
 
             .why-chose-content {
@@ -557,9 +574,8 @@
                 h3 {
                     font-size: 24px;
                     font-weight: 600;
-                    line-height: 21.113px;
+                    line-height: 21.13px;
                     color: #86BE3F;
-                    font-family: 'Poppins', sans-serif;
 
                 }
 
@@ -569,26 +585,28 @@
                     line-height: 13.44px;
                     font-family: Inter;
                     color: #363636;
+                    margin-top: 24px;
+                    margin-bottom: 20px;
                 }
 
                 h6 {
-                    margin: 0px 0px -8px 0px;
+                    margin: 12px 0px 5px 0px;
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 27.92px;
-                    font-family: 'Poppins', sans-serif;
                     color: #363636;
                 }
 
                 ul {
                     padding: 0px 0px 0px 15px;
                     list-style-type: none;
+                    padding-bottom: 20px;
 
                     li {
                         font-size: 16px;
                         font-weight: 400;
                         line-height: 24x;
-                        font-family: 'Poppins', sans-serif;
+                        margin-top: 5px;
                         color: #666666;
                     }
 
@@ -616,36 +634,26 @@
                         font-size: 16px;
                         font-weight: 400;
                         line-height: 17px;
-                        font-family: 'Poppins', sans-serif;
                     }
                 }
 
                 .main-features {
                     width: 413px;
-                    height: 166.55px;
-
+                    min-height: 170px;
 
                     .features {
                         display: flex;
-                        align-items: flex-start;
+                        align-items: baseline;
                         gap: 8px;
-                        margin-top: 20.45px;
+                        margin-top: 5.45px;
 
                         p {
                             margin: 0;
                             font-size: 16px;
                             font-weight: 400;
-                            line-height: 10.8px;
-                            font-family: 'Poppins', sans-serif;
+                            line-height: 24.8px;
                             color: #666666;
 
-                        }
-
-                        .overflow-text {
-                            line-height: 19.92px;
-                            width: 392px;
-                            height: 28px;
-                            margin-top: -2px;
                         }
                     }
                 }
@@ -664,7 +672,6 @@
         font-size: 36px;
         font-weight: 600;
         line-height: 30px;
-        font-family: 'Poppins', sans-serif;
         margin-bottom: 10px;
     }
 
@@ -702,7 +709,6 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 13.92px;
-        font-family: 'Poppins', sans-serif;
     }
 
 
@@ -732,13 +738,14 @@
             }
 
             h5 {
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 16px;
                 line-height: 13.44px;
                 text-align: center;
                 color: #363636;
                 font-family: Inter;
                 margin-top: 12px;
+                padding-bottom: 18px;
             }
 
             p {
@@ -749,6 +756,213 @@
                 color: #666666;
                 font-family: Inter;
             }
+        }
+    }
+}
+
+
+.contect-form-main{
+    margin: 100px 0px;
+    position: relative;
+    text-align: center;
+    .dots-image{
+        position: absolute;
+        left: 200px;
+        top: 0px;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+    .devider{
+        padding: 10px 0px 40px 0px;
+    }
+
+    .contect-us-container{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        .address-card{
+            padding: 20px;
+            border: 1px solid #DEDEDE;
+            border-radius: 9px;
+            width: 350px;
+            height: 344px;
+
+            .location{
+                display: flex;
+                gap: 10px;
+                text-align: left;
+                padding: 10px 0px;
+
+                p{
+                    font-size: 16px;
+                    line-height: 21.36px;
+                    font-weight: 400;
+                    color: #666666;
+                }
+            }
+
+            .email{
+                display: flex;
+                gap: 10px;
+                text-align: left;
+                padding: 10px 0px;
+
+                p{
+                    font-size: 16px;
+                    line-height: 21.36px;
+                    font-weight: 400;
+                    color: #666666;
+                }
+            }
+
+            .phone{
+                display: flex;
+                gap: 10px;
+                border-bottom: 1px solid #DEDEDE;
+                width: 300px;
+                text-align: left;
+                padding: 10px 0px;
+
+                p{
+                    font-size: 16px;
+                    line-height: 21.36px;
+                    font-weight: 400;
+                    color: #666666;
+                }
+            }
+            .address-card-discription{
+                text-align: left;
+                font-size: 16px;
+                line-height: 21.36px;
+                font-weight: 400;
+                color: #363636;
+                padding: 10px 60px 10px 0px;
+            }
+        }
+
+        .form-card{
+            border: 1px solid #DEDEDE;
+            border-radius: 9px;
+            width: 730px;
+            height: 344px;
+
+
+            form{
+                margin-top: 30px;
+
+                .name-text{
+                    width: 327px;
+                    height: 45px;
+                    border-radius: 5px;
+                    border: 1px solid #DEDEDE;
+                    margin-right: 15px;
+
+                    &::placeholder{
+                        padding-left: 20px;
+                    }
+                }
+
+                .name-text:nth-child(2){
+                    margin-right: -1px;
+                }
+                .email-text{
+                    width: 674px;
+                    height: 45px;
+                    border-radius: 5px;
+                    border: 1px solid #DEDEDE;
+                    margin-top: 15px;
+                    
+                    &::placeholder{
+                        padding-left: 20px;
+                    }
+                }
+                .message-text{
+                    width: 674px;
+                    height: 115px;
+                    border-radius: 5px;
+                    border: 1px solid #DEDEDE;
+                    margin-top: 15px;
+
+                    &::placeholder{
+                        padding-left: 20px;
+                    }
+                }
+
+                .button{
+                    margin-top: 15px;
+                    position: relative;
+                    border-radius: 6px;
+                    border: none;
+                    margin-left: 500px;
+                    background-color: #86be3f;
+                    color: #FFFFFF;
+                    height: 45px;
+                    width: 171px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 13.92px;
+                }
+            }
+        }
+    }
+}
+
+.footer-before-main{
+    background-image: url(backgroun-before-footer.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 10px 0px;
+    gap: 100px;
+    
+    .heading-content{
+        width: 503px;
+
+        h5{
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 19.2px;
+            padding-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        p{
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+    }
+
+    .form-input{
+        position: relative;
+
+
+        .email-field{
+            width: 427px;
+            height: 50px;
+            border-radius: 30px;
+            border: none;
+            
+            &::placeholder{
+                padding-left: 20px;
+            }
+        }
+
+        .email-send-button{
+            background-color: #86be3f;
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            width: 39px;
+            height: 39px;
+            border-radius: 22px;
+            border: none;
         }
     }
 }
