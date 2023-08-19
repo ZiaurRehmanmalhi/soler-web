@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,600&display=swap');
 @import "./variables";
+
 @mixin truncate($lines, $lh: 1.2, $spacer: 0) {
     line-height: $lh;
     max-height: $lh * $lines + $spacer + em;
@@ -9,10 +10,10 @@
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
     overflow: hidden;
-  }
+}
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -59,12 +60,12 @@
                 line-height: 24px;
                 margin: 0;
 
-                a{
+                a {
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 24px;
                     color: #8A8888;
-
+                    text-decoration: none;
                 }
 
             }
@@ -88,10 +89,11 @@
                 font-size: 16px;
                 margin: 0;
 
-                a{
+                a {
                     line-height: 24px;
-                    font-weight: 400;    
+                    font-weight: 400;
                     color: #8A8888;
+                    text-decoration: none;
                 }
 
             }
@@ -101,10 +103,10 @@
             position: relative;
             height: 41px;
             width: 129px;
-            color: rgb(255, 255, 255);
+            color: $white;
             border-radius: 6px;
             border: none;
-            background-color: #86be3f;
+            background-color: $theme-color;
             font-family: 'Poppins', sans-serif;
         }
     }
@@ -123,7 +125,6 @@
 
         li {
             list-style: none;
-            margin-bottom: 20px;
 
             a {
                 text-decoration: none;
@@ -133,7 +134,7 @@
                 line-height: 17px;
 
                 &:hover {
-                    color: #86be3f;
+                    color: $theme-color;
                 }
             }
         }
@@ -159,14 +160,14 @@
         font-size: 64px;
         font-weight: 700;
         line-height: 56.01px;
-        color: #fff;
+        color: $white;
     }
 
     p {
         font-weight: 500;
         font-size: 24px;
         line-height: 33.85px;
-        color: #fff;
+        color: $white;
         margin: 0 auto;
         max-width: 65%;
         text-align: center;
@@ -291,7 +292,7 @@
         padding-top: 15px;
 
         p {
-            color: #86BE3F;
+            color: $theme-color;
             font-size: 18px;
             line-height: 16px;
             font-weight: 500;
@@ -359,7 +360,7 @@
             font-size: 30px;
             font-weight: 500;
             line-height: 25px;
-            color: #86BE3F;
+            color: $theme-color;
             padding-bottom: 20px;
         }
 
@@ -512,7 +513,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: relative;
         width: 255px;
-        background-color: #fff;
+        background-color: $white;
         border: 1px solid #f5f5f5;
         box-sizing: border-box;
         height: 147.9px;
@@ -538,6 +539,11 @@
             color: #666;
             text-transform: uppercase;
         }
+
+        &:last-child p,
+        &:nth-last-child(2) p {
+            margin-top: 24px;
+        }
     }
 }
 
@@ -562,7 +568,7 @@
 
         .why-chose-card {
             position: relative;
-            background-color: #fff;
+            background-color: $white;
             box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
             width: 540px;
             text-align: left;
@@ -575,7 +581,7 @@
                     font-size: 24px;
                     font-weight: 600;
                     line-height: 21.13px;
-                    color: #86BE3F;
+                    color: $theme-color;
 
                 }
 
@@ -614,7 +620,7 @@
                         content: "\2022";
                         position: absolute;
                         left: 0;
-                        color: #86BE3F;
+                        color: $theme-color;
                         font-size: 24px;
                         margin: -6px 0px 0px 20px;
                     }
@@ -702,8 +708,8 @@
         position: relative;
         border-radius: 6px;
         border: none;
-        background-color: #86be3f;
-        color: #FFFFFF;
+        background-color: $theme-color;
+        color: $white;
         height: 45px;
         width: 171px;
         font-size: 16px;
@@ -727,7 +733,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: relative;
             width: 227px;
-            background-color: #fff;
+            background-color: $white;
             border: 1px solid #f5f5f5;
             box-sizing: border-box;
             height: 230px;
@@ -760,15 +766,79 @@
     }
 }
 
+.accordion-main-seaction {
+    width: 74%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
 
-.contect-form-main{
-    margin: 100px 0px;
+    .dots-image {
+        top: -50px;
+        right: 70px;
+        position: absolute;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 50px;
+        color: #363636;
+    }
+
+    .accordion-accordion-flush {
+        margin-top: 20px;
+
+        .accordion-item {
+            position: relative;
+            border-radius: 6px;
+            background-color: $white;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.08);
+            width: 100%;
+
+            .accordion-header {
+                font-size: 16px;
+                font-weight: 500;
+                color: #363636;
+                line-height: 40px;
+                margin: 5px 0px 5px 20px;
+            }
+
+            .accordion-body {
+                font-size: 14px;
+                line-height: 40px;
+                font-weight: 400;
+                color: #54595F;
+                text-align: left;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .bottom-button {
+        margin-top: 48.67px;
+        position: relative;
+        border-radius: 6px;
+        border: none;
+        background-color: $theme-color;
+        color: $white;
+        height: 45px;
+        width: 171px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 13.92px;
+    }
+}
+
+.contect-form-main {
+    margin: 80px 0px;
     position: relative;
     text-align: center;
-    .dots-image{
+
+    .dots-image {
         position: absolute;
-        left: 200px;
-        top: 0px;
+        left: 240px;
+        top: -100px;
     }
 
     h2 {
@@ -776,29 +846,30 @@
         font-weight: 600;
         line-height: 30px;
     }
-    .devider{
+
+    .devider {
         padding: 10px 0px 40px 0px;
     }
 
-    .contect-us-container{
+    .contect-us-container {
         display: flex;
         justify-content: center;
         gap: 30px;
 
-        .address-card{
+        .address-card {
             padding: 20px;
             border: 1px solid #DEDEDE;
             border-radius: 9px;
             width: 350px;
             height: 344px;
 
-            .location{
+            .location {
                 display: flex;
                 gap: 10px;
                 text-align: left;
                 padding: 10px 0px;
 
-                p{
+                p {
                     font-size: 16px;
                     line-height: 21.36px;
                     font-weight: 400;
@@ -806,13 +877,13 @@
                 }
             }
 
-            .email{
+            .email {
                 display: flex;
                 gap: 10px;
                 text-align: left;
                 padding: 10px 0px;
 
-                p{
+                p {
                     font-size: 16px;
                     line-height: 21.36px;
                     font-weight: 400;
@@ -820,7 +891,7 @@
                 }
             }
 
-            .phone{
+            .phone {
                 display: flex;
                 gap: 10px;
                 border-bottom: 1px solid #DEDEDE;
@@ -828,14 +899,15 @@
                 text-align: left;
                 padding: 10px 0px;
 
-                p{
+                p {
                     font-size: 16px;
                     line-height: 21.36px;
                     font-weight: 400;
                     color: #666666;
                 }
             }
-            .address-card-discription{
+
+            .address-card-discription {
                 text-align: left;
                 font-size: 16px;
                 line-height: 21.36px;
@@ -845,62 +917,64 @@
             }
         }
 
-        .form-card{
+        .form-card {
             border: 1px solid #DEDEDE;
             border-radius: 9px;
             width: 730px;
             height: 344px;
 
 
-            form{
+            form {
                 margin-top: 30px;
 
-                .name-text{
+                .name-text {
                     width: 327px;
                     height: 45px;
                     border-radius: 5px;
                     border: 1px solid #DEDEDE;
                     margin-right: 15px;
 
-                    &::placeholder{
+                    &::placeholder {
                         padding-left: 20px;
                     }
                 }
 
-                .name-text:nth-child(2){
+                .name-text:nth-child(2) {
                     margin-right: -1px;
                 }
-                .email-text{
+
+                .email-text {
                     width: 674px;
                     height: 45px;
                     border-radius: 5px;
                     border: 1px solid #DEDEDE;
                     margin-top: 15px;
-                    
-                    &::placeholder{
+
+                    &::placeholder {
                         padding-left: 20px;
                     }
                 }
-                .message-text{
+
+                .message-text {
                     width: 674px;
                     height: 115px;
                     border-radius: 5px;
                     border: 1px solid #DEDEDE;
                     margin-top: 15px;
 
-                    &::placeholder{
+                    &::placeholder {
                         padding-left: 20px;
                     }
                 }
 
-                .button{
+                .button {
                     margin-top: 15px;
                     position: relative;
                     border-radius: 6px;
                     border: none;
                     margin-left: 500px;
-                    background-color: #86be3f;
-                    color: #FFFFFF;
+                    background-color: $theme-color;
+                    color: $white;
                     height: 45px;
                     width: 171px;
                     font-size: 16px;
@@ -912,50 +986,52 @@
     }
 }
 
-.footer-before-main{
+
+.footer-before-main {
     background-image: url(backgroun-before-footer.png);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0px 10px 0px;
-    gap: 100px;
-    
-    .heading-content{
+    gap: 180px;
+
+    .heading-content {
         width: 503px;
 
-        h5{
+        h5 {
             font-size: 24px;
             font-weight: 600;
             line-height: 19.2px;
             padding-bottom: 10px;
-            color: #FFFFFF;
+            color: $white;
         }
 
-        p{
+        p {
             font-size: 16px;
             line-height: 18px;
             font-weight: 400;
-            color: #FFFFFF;
+            color: $white;
         }
     }
 
-    .form-input{
+    .form-input {
         position: relative;
 
 
-        .email-field{
+        .email-field {
             width: 427px;
             height: 50px;
             border-radius: 30px;
             border: none;
-            
-            &::placeholder{
+            padding: 0px 50px 0px 22px;
+
+            &::placeholder {
                 padding-left: 20px;
             }
         }
 
-        .email-send-button{
-            background-color: #86be3f;
+        .email-send-button {
+            background-color: $theme-color;
             position: absolute;
             top: 6px;
             right: 8px;
@@ -963,6 +1039,169 @@
             height: 39px;
             border-radius: 22px;
             border: none;
+        }
+    }
+}
+
+.footer-section {
+    background-image: url();
+    background-position: center center;
+    width: 100%;
+    height: 520px;
+    background-color: #4d4d4d;
+
+
+    .footer-main {
+        width: 74%;
+        margin: auto;
+
+        .footer-upper {
+            display: flex;
+            justify-content: center;
+            padding-top: 90px;
+            gap: 60px;
+            border-bottom: 1px solid $white;
+
+            .frist-column {
+                margin-top: -25px;
+
+
+                .logo-image {
+                    padding-bottom: 15px;
+                }
+
+                p {
+                    width: 274px;
+                    height: 125px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23.36px;
+                    color: $white;
+                }
+
+                .product-images {
+                    display: flex;
+                    gap: 5px;
+                    padding-bottom: 5px;
+                }
+            }
+
+            .second-column,
+            .third-column {
+
+                h5 {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 15.28px;
+                    color: $white;
+                    margin-left: 30px;
+                    padding-bottom: 10px;
+                    white-space: pre;
+                }
+
+                ul {
+                    gap: 10px;
+
+                    li {
+                        list-style: none;
+                        padding-bottom: 10px;
+
+                        a {
+                            color: $white;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 15.27px;
+                            text-decoration: none;
+                            white-space: pre;
+                        }
+                    }
+                }
+            }
+
+            .forth-column {
+                padding: 0px 20px;
+                width: 350px;
+                height: 344px;
+
+                h5 {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 15.28px;
+                    color: $white;
+                    margin-left: 30px;
+                    padding-bottom: 10px;
+                }
+
+                .location {
+                    display: flex;
+                    gap: 10px;
+                    text-align: left;
+                    padding: 0px;
+
+                    p {
+                        font-size: 16px;
+                        line-height: 21.36px;
+                        font-weight: 400;
+                        color: $white;
+                    }
+                }
+
+                .email {
+                    display: flex;
+                    gap: 10px;
+                    text-align: left;
+                    padding: 0px;
+
+                    p {
+                        font-size: 16px;
+                        line-height: 21.36px;
+                        font-weight: 400;
+                        color: $white;
+                    }
+                }
+
+                .phone {
+                    display: flex;
+                    gap: 10px;
+                    width: 300px;
+                    text-align: left;
+                    padding: 0px;
+
+                    p {
+                        font-size: 16px;
+                        line-height: 21.36px;
+                        font-weight: 400;
+                        color: $white;
+                    }
+                }
+
+                .address-card-discription {
+                    text-align: left;
+                    font-size: 16px;
+                    line-height: 21.36px;
+                    font-weight: 400;
+                    color: $white;
+                    padding: 10px 60px 10px 0px;
+                }
+            }
+        }
+
+        .footer-lower {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 12.81px;
+                color: $white;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 15px;
+            }
         }
     }
 }
