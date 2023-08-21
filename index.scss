@@ -64,7 +64,7 @@
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 24px;
-                    color: #8A8888;
+                    color: $font-color;
                     text-decoration: none;
                 }
 
@@ -92,7 +92,7 @@
                 a {
                     line-height: 24px;
                     font-weight: 400;
-                    color: #8A8888;
+                    color: $font-color;
                     text-decoration: none;
                 }
 
@@ -128,7 +128,7 @@
 
             a {
                 text-decoration: none;
-                color: #8a8888;
+                color: $font-color;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 17px;
@@ -183,7 +183,7 @@
         line-height: 30px;
         font-size: 36px;
         font-weight: 600;
-        color: #363636;
+        color: $primery-color;
     }
 
     .divide-image {
@@ -203,7 +203,7 @@
         display: flex;
         line-height: 26px;
         font-weight: 400;
-        color: #363636;
+        color: $primery-color;
         max-width: 75%;
         margin: auto;
         padding-bottom: 20px;
@@ -240,7 +240,7 @@
                 line-height: 22px;
                 margin: 10px 0px;
                 font-weight: 500;
-                color: #363636;
+                color: $primery-color;
             }
 
             p {
@@ -279,7 +279,7 @@
             line-height: 30px;
             font-weight: 500;
             max-width: 87%;
-            color: #363636;
+            color: $primery-color;
         }
     }
 
@@ -368,7 +368,7 @@
             font-size: 34px;
             font-weight: 600;
             line-height: 39px;
-            color: #363636;
+            color: $primery-color;
             padding-bottom: 15px;
         }
 
@@ -479,7 +479,7 @@
                 text-align: center;
                 margin: 10px 0px 0px 0px;
                 height: 50px;
-                color: #363636;
+                color: $primery-color;
 
             }
 
@@ -490,7 +490,7 @@
                 text-align: center;
                 width: 323px;
                 margin: auto;
-                color: #363636;
+                color: $primery-color;
                 @include truncate(6);
             }
         }
@@ -527,7 +527,7 @@
             font-size: 24px;
             line-height: 24px;
             text-align: center;
-            color: #363636;
+            color: $primery-color;
             margin: 10px 0px 10px 0px;
         }
 
@@ -590,7 +590,7 @@
                     font-weight: 500;
                     line-height: 13.44px;
                     font-family: Inter;
-                    color: #363636;
+                    color: $primery-color;
                     margin-top: 24px;
                     margin-bottom: 20px;
                 }
@@ -600,7 +600,7 @@
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 27.92px;
-                    color: #363636;
+                    color: $primery-color;
                 }
 
                 ul {
@@ -748,7 +748,7 @@
                 font-size: 16px;
                 line-height: 13.44px;
                 text-align: center;
-                color: #363636;
+                color: $primery-color;
                 font-family: Inter;
                 margin-top: 12px;
                 padding-bottom: 18px;
@@ -783,7 +783,7 @@
         font-size: 32px;
         font-weight: 600;
         line-height: 50px;
-        color: #363636;
+        color: $primery-color;
     }
 
     .accordion-accordion-flush {
@@ -799,7 +799,7 @@
             .accordion-header {
                 font-size: 16px;
                 font-weight: 500;
-                color: #363636;
+                color: $primery-color;
                 line-height: 40px;
                 margin: 5px 0px 5px 20px;
             }
@@ -912,7 +912,7 @@
                 font-size: 16px;
                 line-height: 21.36px;
                 font-weight: 400;
-                color: #363636;
+                color: $primery-color;
                 padding: 10px 60px 10px 0px;
             }
         }
